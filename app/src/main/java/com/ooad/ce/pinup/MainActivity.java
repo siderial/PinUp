@@ -2,6 +2,7 @@ package com.ooad.ce.pinup;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
     private Button mSigninButtonDialog;
     private Button mSignupButtonDialog;
     private Button nextButton;
+    private EditText inputNLoop;
+    private int nLoop;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -26,11 +30,18 @@ public class MainActivity extends AppCompatActivity {
         mSignupButtonDialog = (Button) findViewById(R.id.signup);
         nextButton = (Button) findViewById(R.id.next);
 
+        inputNLoop =(EditText)findViewById(R.id.editText);
+
+
+
+
         mSigninButtonDialog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 LayoutInflater inflater = getLayoutInflater();
+
+
 
                 View view = inflater.inflate(R.layout.sign_in_dialog, null);
                 builder.setView(view);
@@ -106,7 +117,11 @@ public class MainActivity extends AppCompatActivity {
 
         nextButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), NewsFeedActivity.class);
+               Intent myIntent = new Intent(view.getContext(), NewsFeedActivity.class);
+                ///parse data to another activity
+
+                myIntent.putExtra("loop",inputNLoop.getText().toString());
+
                 startActivityForResult(myIntent, 0);
             }
         });

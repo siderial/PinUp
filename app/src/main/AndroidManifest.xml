@@ -15,10 +15,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NewsFeedActivity"
-            android:theme="@style/CustomActionBarTheme"
+        <activity
+            android:name=".NewsFeedActivity"
             android:label="News Feed"
-            >
+            android:theme="@style/CustomActionBarTheme" >
+        </activity>
+        <activity
+            android:name=".evnt_page"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
         </activity>
     </application>
 
