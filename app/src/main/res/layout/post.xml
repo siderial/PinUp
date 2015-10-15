@@ -2,10 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#02000000"
+    android:background="#FFFFFF"
     android:gravity="center_vertical"
-    android:orientation="horizontal"
-    >
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_action_name2" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -13,29 +19,28 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/textView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp"
-            android:text="Text"
-            android:textSize="20sp"
-            android:textColor="@color/colorPrimaryDark" />
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:text="Text"
+        android:textSize="20sp"
+        android:textColor="#000000" />
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="5dp"
             android:text="Text"
-            android:textSize="15sp"
-            android:textColor="@color/actionbar_background" />
-
-
-
+            android:textSize="20sp"
+            android:textColor="#000000" />
     </LinearLayout>
 
 </LinearLayout>
